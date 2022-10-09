@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bjbemister19/turbo-sniffle/issues"
   },
-  "homepage": "https://github.com/bjbemister19/turbo-sniffle#readme"
+  "homepage": "https://github.com/bjbemister19/turbo-sniffle#readme",
+  "engines": {
+    "node": "16.x"
+  }
 }
