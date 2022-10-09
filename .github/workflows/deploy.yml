@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: ls
       - run: cd server && npm install && cd ..
-      - run: cd client && npm install && npm build && cd ..
+      - run: cd client && npm install && npm run build && cd ..
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
