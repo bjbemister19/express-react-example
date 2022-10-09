@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: rm .gitignore && mv .deploy-gitignore .gitignore
       - run: cd server && npm install --production && cd ..
       - run: cd client && npm install --production && npm run build && cd ..
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
