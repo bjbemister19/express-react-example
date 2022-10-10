@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Configure and Build
+      - name: Configure & Build
         run: |
           rm .gitignore && mv .deploy-gitignore .gitignore
           cd server && npm install --production && cd ..
           cd client && npm install --production && npm run build && cd ..
-      - name: Add to Git
+      - name: Add node_modules and build output to git
         run: |
           git config --global user.email "${{secrets.HEROKU_EMAIL}}"
           git config --global user.name "bjbemister"
