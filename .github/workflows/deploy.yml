@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Configure & Build
+      - name: Configure and Build
         run: |
           rm .gitignore && mv .deploy-gitignore .gitignore
           cd server && npm install --production && cd ..
